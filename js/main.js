@@ -9,18 +9,20 @@ $(".board").click(function() {
 	let selectedSquare = $(this);
 
 	if( selectedSquare.hasClass("X") || selectedSquare.hasClass("O") ) {
-		alert("Already selected, select another square")
+		alert("Already selected, select another square");
 	} else if(player === 1) {
-    selectedSquare.addClass("X").text("X");
+    selectedSquare.addClass("X").text("X").css("background", "#37c162");
     if(checkForWin("X") ) {
-      alert("Player " + player + " won!");
+      $("h3").append("Player 1 wins!");
+      $(".board").off();
     } else {
       player = 2;
     }
   } else {
-    selectedSquare.addClass("O").text("O");
+    selectedSquare.addClass("O").text("O").css("background", "#387ce0");
     if(checkForWin("O") ) {
-      alert("Player " + player + " won!");
+      $("h3").append("Player 2 wins!");
+      $(".board").off();
     }
     player = 1;
   }
@@ -54,6 +56,14 @@ let checkForWin = function(input) {
   }
 };
 
+////////////////////////////////////////////////////////////////////////
+
+
+// Game Reset
+
+$("button").click(function(){
+  location.reload(true);
+});
 
 
 
@@ -75,19 +85,7 @@ let checkForWin = function(input) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// previous things I tried that didn't really work the way I wanted them to work
 
 // let player1 = true;
 // let Player2 = true;
