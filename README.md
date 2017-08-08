@@ -6,7 +6,8 @@ A simple Tic Tac Toe implementation in Javascript for Project 0 in WDI 23.
 
 ## How to play
 
-To play the game, simply open index.html in your browser.
+To play the game, simply open the link in your browser. https://mack0101.github.io/tictactoe/
+
 When a player wins or game end in a draw, press the reset button to play again.
 
 ## Purpose of this game
